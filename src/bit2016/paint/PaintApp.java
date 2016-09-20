@@ -11,8 +11,11 @@ public class PaintApp {
 		
 		Point point2 = new Point(200 , 200);
 		point2.show(true);
-		
 		point2.show(false);
+		
+		
+		Point point3 = new ColorPoint(50, 50, "red");
+		point3.show();
 	}
 
 }
