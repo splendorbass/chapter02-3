@@ -16,6 +16,26 @@ public class PaintApp {
 		
 		Point point3 = new ColorPoint(50, 50, "red");
 		point3.show();
+		point3.show(false);
+		point3.show(true);
+		
+		Shape rectangle = new Rectangle();
+		rectangle.draw();
+		
+		Shape circle = new Circle();
+		//circle.draw();
+		draw(circle);
+		
+		Shape triangle = new Triangle();
+		triangle.draw();
+		
+		draw( new Pentagon() );
+
+	}
+	
+	public static void draw( Shape shape ){
+		shape.draw();
+		
 	}
 
 }
