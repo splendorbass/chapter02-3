@@ -1,8 +1,17 @@
-package bit2016.paint;
+package com.bit2016.paint.shape;
 
 public abstract class Shape {
 	private String fillColor;
 	private String lineColor;
+	
+	public Shape(){
+	}
+	
+	public Shape( String fillColor, String lineColor){
+		this.fillColor = fillColor;
+		this.lineColor = lineColor;
+	}
+	
 	
 	public String getFillColor() {
 		return fillColor;
@@ -20,5 +29,5 @@ public abstract class Shape {
 		this.lineColor = lineColor;
 	}
 
-	public abstract void draw();
+	public abstract double calculateArea();
 }

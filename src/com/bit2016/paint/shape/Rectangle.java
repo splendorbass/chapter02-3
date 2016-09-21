@@ -1,11 +1,23 @@
-package bit2016.paint;
+package com.bit2016.paint.shape;
 
-public class Rectangle extends Shape {
+import com.bit2016.paint.i.Drawable;
+
+public class Rectangle extends Shape implements Drawable {
 	private int x1;
 	private int y1;
 	private int x2;
-	private int y2
-	;
+	private int y2;
+	
+	public Rectangle(){
+	}
+	
+	public Rectangle( int x1, int y1, int x2, int y2){
+		this.x1 = x1;
+		this.y1 = y1;
+		this.x2 = x2;
+		this.y2 = y2;
+	}
+	
 	public int getX1() {
 		return x1;
 	}
@@ -33,5 +45,11 @@ public class Rectangle extends Shape {
 	@Override
 	public void draw() {
 		System.out.println("사각형을 그렸습니다.");
+	}
+
+	@Override
+	public double calculateArea() {
+		
+		return (x2-x1)*(y2-y1);
 	}
 }
